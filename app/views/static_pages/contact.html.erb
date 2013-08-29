@@ -1,0 +1,26 @@
+<% provide(:title, "Contact") %>
+
+<div class="container contact">
+	<div class="page-header">
+  	<h1>Got a question or feedback?</h1>
+	</div>
+	<div class="row">
+		<div class="span4 offset4">
+			<form>
+				<label>Name:</label>
+				<input type="text" name="name">
+				<label>Email:</label>
+				<input type="text" name="email">
+				<label>Type:</label>
+				<select name="type">
+					<option value="bug">Website Issues</option>
+					<option value="feature">Suggest a Feature</option>
+					<option value="feedback">General Feedback</option>
+				</select>
+				<textarea name="message" cols="30" rows="10"></textarea>
+				<input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+				<input type="submit" value="Submit" class="btn btn-primary">
+			</form>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,31 @@
+<div class="navbar-wrapper">
+  <header class="navbar navbar-fixed-top navbar-inverse">
+    <div class="navbar-inner">
+      <%= link_to "Travelfig", root_path, class: "brand logo" %>
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"></a>
+      <div class="nav-collapse collapse">
+      <!-- If the user is signed in display the following  -->
+        <ul class="nav">
+          <li><a href="">Travelbook</a></li>
+          <li><a href="">Destination</a></li>
+          <li><a href="">Itinerary Builder</a></li>
+          <li><a href="">Upload</a></li>
+        </ul>
+        <ul class="nav pull-right">
+          <li><%= link_to "Contact Us", contact_path %></li>
+          <!-- <li id="fat-menu" class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              Account <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="">Profile</a></li>
+              <li><a href="">Setting</a></li>
+              <li class="divider"></li>
+              <li><a href="">Sign out</a></li>
+            </ul>
+          </li> -->
+        </ul>
+      </div> <!-- /.nav-collapse -->
+    </div> <!-- /.navbar-inner -->
+  </header> <!-- /.navbar navbar-inverse -->
+</div><!-- /.navbar-wrapper -->
