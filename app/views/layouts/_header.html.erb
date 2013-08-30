@@ -1,10 +1,11 @@
 <div class="navbar-wrapper">
   <header class="navbar navbar-fixed-top navbar-inverse">
     <div class="navbar-inner">
-      <%= link_to "Travelfig", root_path, class: "brand logo" %>
+      <%= link_to "TravelFig", root_path, class: "brand logo" %>
       <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"></a>
       <div class="nav-collapse collapse">
       <!-- If the user is signed in display the following  -->
+      <% if user_signed_in? %>
         <ul class="nav">
           <li><a href="">Travelbook</a></li>
           <li><a href="">Destination</a></li>
@@ -13,18 +14,27 @@
         </ul>
         <ul class="nav pull-right">
           <li><%= link_to "Contact Us", contact_path %></li>
-          <!-- <li id="fat-menu" class="dropdown">
+          <li id="fat-menu" class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               Account <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
               <li><a href="">Profile</a></li>
-              <li><a href="">Setting</a></li>
+              <li><%= link_to "Setting", edit_user_registration_path %></li>
               <li class="divider"></li>
-              <li><a href="">Sign out</a></li>
+              <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
             </ul>
-          </li> -->
+          </li>
         </ul>
+      <% else %>
+        <ul class="nav pull-right">
+          <li><%= link_to "Home", root_path %></li>
+          <li><a href="#">Destinations</a></li>
+          <li><a href="#">Itinerary Builder</a></li>
+          <li><%= link_to "Contact Us", contact_path %></li>
+          <li><%= link_to "Sign In", new_user_session_path %></li>
+        </ul>
+      <% end %>
       </div> <!-- /.nav-collapse -->
     </div> <!-- /.navbar-inner -->
   </header> <!-- /.navbar navbar-inverse -->

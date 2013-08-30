@@ -1,8 +1,11 @@
 Travelfig::Application.routes.draw do
+  devise_for :users
+  get "static_page/invite"
   get "static_pages/home"
   get "static_pages/contact"
 
   root to: 'static_pages#home'
+  get '/beta', to: 'static_pages#beta'
   get '/contact',   to: 'static_pages#contact'
 
   # The priority is based upon order of creation: first created -> highest priority.
