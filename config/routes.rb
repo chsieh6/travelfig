@@ -1,4 +1,6 @@
 Travelfig::Application.routes.draw do
+  resources :pins
+
   devise_for :users
   get "static_page/invite"
   get "static_pages/home"

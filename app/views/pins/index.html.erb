@@ -1,0 +1,27 @@
+<% provide(:title, 'New Pin') %>
+<div class="container all_pin">
+  <div class="row">
+    <div class="span12">
+      <h1>Listing pins</h1>
+
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Descriptions</th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <%= render @pins %>
+        </tbody>
+      </table>
+
+      <br>
+
+      <%= link_to 'New Pin', new_pin_path %>
+    </div>
+  </div>
+</div>

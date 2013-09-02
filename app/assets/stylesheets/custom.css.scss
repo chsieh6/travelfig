@@ -28,7 +28,7 @@ p {
 }
 
 #wrapper {
-  min-height: 550px;
+  margin: 0px 30px;
 }
 
 body {
@@ -68,13 +68,6 @@ body {
   .dropdown-menu li  a {
     padding: 3px 20px;
   }
-}
-
-.error_msg {
-  position: absolute;
-  width: 70%;
-  margin-left: 150px;
-  z-index: 10;
 }
 
 /* FOOTER CONTENT

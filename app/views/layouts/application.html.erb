@@ -10,12 +10,12 @@
 </head>
 <body>
 <%= render 'layouts/header' %>
-    <% flash.each do |key, value| %>
-      <div class="alert alert-<%= key %> error_msg">
-        <button type="button" class="close" data-dismiss="alert">&times;</button>
-        <%= value %>
-      </div>
-    <% end %>
+  <% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %> error_msg">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <%= value %>
+    </div>
+  <% end %>
   <%= yield %>
 </body>
 <%= render 'layouts/footer' %>

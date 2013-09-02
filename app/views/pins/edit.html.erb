@@ -1,0 +1,13 @@
+<% provide(:title, 'Edit Pin') %>
+<div class="container edit_pin">
+  <div class="row">
+    <div class="span7 offset2">
+			<h1>Editing pin</h1>
+
+			<%= render 'form' %>
+
+			<%= link_to 'Show', @pin %> |
+			<%= link_to 'Back', pins_path %>
+		</div>
+	</div>
+</div>

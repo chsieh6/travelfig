@@ -1,0 +1,12 @@
+<% provide(:title, 'The Pin') %>
+<div class="container show_pin">
+  <div class="row">
+    <div class="span7 offset2">
+    	<div class="well">
+				<p><strong>Descriptions:</strong><%= @pin.descriptions %></p>
+				<%= link_to 'Edit', edit_pin_path(@pin) %> |
+				<%= link_to 'Back', pins_path %>
+			</div>
+		</div>
+	</div>
+</div>
