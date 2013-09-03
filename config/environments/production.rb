@@ -79,4 +79,14 @@ Travelfig::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  #Configuring Amazon S3 for Paperclip uploads
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_credentials => {
+      :bucket => ENV['travelfig'],
+      :access_key_id => ENV['AKIAI7NBRNNRWW4LK3ZA'],
+      :secret_access_key => ENV['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']
+    }
+  }
 end

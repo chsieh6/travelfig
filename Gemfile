@@ -15,6 +15,7 @@ gem 'jbuilder', '1.0.2'
 gem 'devise'
 gem 'simple_form', '3.0.0.rc'
 gem "paperclip", "~> 3.0"
+gem 'aws-sdk'
 gem 'hirb'
 # gem 'bcrypt-ruby', '3.0.1'
 # gem 'faker', '1.1.2'
