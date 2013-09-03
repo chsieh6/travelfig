@@ -6,7 +6,7 @@ Travelfig::Application.routes.draw do
   get "static_pages/home"
   get "static_pages/contact"
 
-  root to: 'static_pages#home'
+  root to: 'pins#index'
   get '/beta', to: 'static_pages#beta'
   get '/contact',   to: 'static_pages#contact'
 

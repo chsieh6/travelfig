@@ -1,5 +1,13 @@
-<% provide(:title, 'All Pin') %>
-<div class="pins">
-  <%= render @pins %>
-</div>
+<% if user_signed_in? %>
+
+  <% provide(:title, 'All Pin') %>
+  <div class="pins">
+    <%= render @pins %>
+  </div>
+
+<% else %>
+
+  <%= render 'static_pages/home' %>
+
+<% end %> 
 
