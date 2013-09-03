@@ -5,7 +5,7 @@ class PinsController < ApplicationController
   # GET /pins
   # GET /pins.json
   def index
-    @pins = Pin.all
+    @pins = Pin.order("created_at desc")
   end
 
   # GET /pins/1
@@ -66,7 +66,11 @@ class PinsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_pin
-      @pin = current_user.pins.find(params[:id])
+      if current_user.admin
+        @pin = Pin.find(params[:id])
+      else
+        @pin = current_user.pins.find(params[:id])
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

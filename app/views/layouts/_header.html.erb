@@ -8,9 +8,9 @@
       <% if user_signed_in? %>
         <ul class="nav">
           <li><a href="">Travelbook</a></li>
-          <li><a href="">Destination</a></li>
+          <li><%= link_to "Destinations", pins_path %></li>
           <li><a href="">Itinerary Builder</a></li>
-          <li><a href="">Upload</a></li>
+          <li><%= link_to "Add Pin", new_pin_path %></li>
         </ul>
         <ul class="nav pull-right">
           <li><%= link_to "Contact Us", contact_path %></li>
@@ -29,7 +29,7 @@
       <% else %>
         <ul class="nav pull-right">
           <li><%= link_to "Home", root_path %></li>
-          <li><a href="#">Destinations</a></li>
+          <li><%= link_to "Destinations", pins_path %></li>
           <li><a href="#">Itinerary Builder</a></li>
           <li><%= link_to "Contact Us", contact_path %></li>
           <li><%= link_to "Sign In", new_user_session_path %></li>

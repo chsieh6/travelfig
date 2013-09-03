@@ -73,7 +73,7 @@ body {
 /* FOOTER CONTENT
 -------------------------------------------------- */
 
-footer {
+#footer {
   background: black;
   
   p {
@@ -368,7 +368,32 @@ input {
   z-index: 1000;
 }
 
+/* JQUERY MASONRY
+-------------------------------------------------- */
 
+.box {
+  margin: 5px;
+  padding: 5px;
+  font-size: 11px;
+  line-height: 1.4em;
+  float: left;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px #444;
+  width: 214px;
+
+  img {
+    width: 100%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+}
+
+.description {
+    margin: 10px 0 5px;
+}
 
 
 
