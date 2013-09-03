@@ -1,3 +1,6 @@
 class Pin < ActiveRecord::Base
-	validates :descriptions, presence: true
+	belongs_to :user
+
+	validates :descriptions, :user_id, presence: true
+
 end
