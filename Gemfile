@@ -14,13 +14,12 @@ gem 'turbolinks', '1.1.1'
 gem 'jbuilder', '1.0.2'
 gem 'devise'
 gem 'simple_form', '3.0.0.rc'
-# gem 'masonry-rails'
-# gem 'hirb'
+gem "paperclip", "~> 3.0"
+gem 'hirb'
 # gem 'bcrypt-ruby', '3.0.1'
 # gem 'faker', '1.1.2'
 # gem 'will_paginate', '3.0.4'
 # gem 'bootstrap-will_paginate', '0.0.9'
-# gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 # gem 'rubylight'
 
 group :development, :test do

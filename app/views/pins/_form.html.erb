@@ -1,5 +1,9 @@
 <%= simple_form_for(@pin) do |f| %>
   <%= f.error_notification %>
+  <%= f.full_error :image_file_size, class: "alert alert-error" %>
+  <%= f.full_error :image_content_type, class: "alert alert-error" %>
+
+  <%= f.input :image, label: "Upload an image" %>
 
   <%= f.input :descriptions, as: :text, input_html: { row: "5"} %>
 
