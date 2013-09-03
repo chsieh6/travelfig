@@ -84,9 +84,9 @@ Travelfig::Application.configure do
   config.paperclip_defaults = {
     :storage => :s3,
     :s3_credentials => {
-      :bucket => ENV['travelfig'],
-      :access_key_id => ENV['AKIAI7NBRNNRWW4LK3ZA'],
-      :secret_access_key => ENV['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']
+      :bucket => ENV['AWS_BUCKET'],
+      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
     }
   }
 end
