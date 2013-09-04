@@ -1,7 +1,10 @@
 Travelfig::Application.routes.draw do
+  get "users/show"
   resources :pins
 
   devise_for :users
+  get 'users/:id' => 'users#show', as: :user
+
   get "static_page/invite"
   get "static_pages/home"
   get "static_pages/contact"
