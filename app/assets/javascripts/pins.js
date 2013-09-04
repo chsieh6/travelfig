@@ -1,22 +1,22 @@
 $(document).ready(function(){
-  $('#isotope-container').imagesLoaded(function(){
-  	$("#isotope-container").isotope({
+	var $container = $('#isotope-container');
+  $container.imagesLoaded(function(){
+  	$container.isotope({
   		itemSelector: '.box',
-  	});   
+  	});
+  	$container.infinitescroll({
+      navSelector  : '.pagination',    // selector for the paged navigation 
+      nextSelector : '.next_page a',  // selector for the NEXT link (to page 2)
+      itemSelector : '.box',     // selector for all items you'll retrieve
+      loading: {
+          finishedMsg: 'No more images to load.',
+          img: 'http://i.imgur.com/qkKy8.gif'
+        }
+      },
+      // call Isotope as a callback
+      function( newElements ) {
+        $container.isotope( 'appended', $( newElements ) ); 
+      }
+    );  
   })
-  .always( function( instance ) {
-    console.log('all images loaded');
-  })
-  .done( function( instance ) {
-    console.log('all images successfully loaded');
-  })
-  .fail( function() {
-    console.log('all images loaded, at least one is broken');
-  })
-  .progress( function( instance, image ) {
-    var result = image.isLoaded ? 'loaded' : 'broken';
-    console.log( 'image is ' + result + ' for ' + image.img.src );
-  });
 });
-    
-

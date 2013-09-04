@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
 
   has_many :pins, :dependent => :destroy
 
-  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/assets/missing.jpg"
+  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "https://s3.amazonaws.com/travelfig_heroku/images/home/missing.jpg"
 
   validates_attachment :avatar, content_type: { content_type: ['image/jpeg', 'image/jpg', 'image/png', 'image/gif']}, 
 															  size: { less_than: 5.megabytes}
