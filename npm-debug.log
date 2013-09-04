@@ -1,0 +1,42 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', '-g', 'bower' ]
+2 info using npm@1.3.8
+3 info using node@v0.10.16
+4 verbose cache add [ 'bower', null ]
+5 verbose cache add name=undefined spec="bower" args=["bower",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'bower',
+6 verbose parsed url   path: 'bower',
+6 verbose parsed url   href: 'bower' }
+7 silly lockFile 206e3ce5-bower bower
+8 verbose lock bower /Users/charleshsieh/.npm/206e3ce5-bower.lock
+9 silly lockFile 206e3ce5-bower bower
+10 verbose addNamed [ 'bower', '' ]
+11 verbose addNamed [ null, '*' ]
+12 silly lockFile 1240aab1-bower bower@
+13 verbose lock bower@ /Users/charleshsieh/.npm/1240aab1-bower.lock
+14 silly lockFile 1240aab1-bower bower@
+15 error Error: EACCES, open '/Users/charleshsieh/.npm/1240aab1-bower.lock'
+15 error  { [Error: EACCES, open '/Users/charleshsieh/.npm/1240aab1-bower.lock']
+15 error   errno: 3,
+15 error   code: 'EACCES',
+15 error   path: '/Users/charleshsieh/.npm/1240aab1-bower.lock' }
+16 error Please try running this command again as root/Administrator.
+17 error System Darwin 12.4.0
+18 error command "node" "/usr/local/bin/npm" "install" "-g" "bower"
+19 error cwd /Users/charleshsieh/Desktop/travelfig/travelfig
+20 error node -v v0.10.16
+21 error npm -v 1.3.8
+22 error path /Users/charleshsieh/.npm/1240aab1-bower.lock
+23 error code EACCES
+24 error errno 3
+25 error stack Error: EACCES, open '/Users/charleshsieh/.npm/1240aab1-bower.lock'
+26 verbose exit [ 3, true ]

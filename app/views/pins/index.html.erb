@@ -1,13 +1,10 @@
 <% if user_signed_in? %>
-
   <% provide(:title, 'All Pin') %>
-  <div class="pins">
+  <div id="isotope-container">
     <%= render @pins %>
   </div>
-
+  <%= will_paginate @pins %>
 <% else %>
-
   <%= render 'static_pages/home' %>
-
 <% end %> 
 
