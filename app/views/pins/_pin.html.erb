@@ -1,9 +1,15 @@
 <div class="box">
+	<% if pin.user == current_user %>
+		<%= render 'pins/category_button' %>
+	<% else %>
+		<%= render 'pins/add_button' %>
+	<% end %>
 	<%= link_to (image_tag pin.image(:medium)), pin %>
-    <p class="description"><%= pin.descriptions %></p>
-    <p><strong>Posted by <%= link_to pin.user.username, pin.user %></strong></p>
+    <p class="description pin_text"><%= pin.descriptions %></p>
+    <hr style="margin: 10px"></hr>
+    <p class="pin_text"><strong>Posted by <%= link_to pin.user.username, pin.user %></strong></p>
 		<% if (current_user == pin.user) || (current_user.admin) %>
-		  <p>
+		  <p class="pin_text">
 		  	<%= link_to 'Edit', edit_pin_path(pin) %>
 		  	<%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %>
 	    </p>

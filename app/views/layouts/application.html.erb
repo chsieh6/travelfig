@@ -6,17 +6,20 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= render 'layouts/shim' %>
   <%= csrf_meta_tags %>
-  <%= tag :meta, name: "viewport", content: "width=device-width, initial-scale=1.0" %>
+  <%= tag :meta, name: "viewport", content: "width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" %>
+  <%= tag :meta, name: "HandheldFriendly", content: "true" %>
 </head>
 <body>
 <%= render 'layouts/header' %>
-  <% flash.each do |key, value| %>
-    <div class="alert alert-<%= key %> error_msg">
-      <button type="button" class="close" data-dismiss="alert">&times;</button>
-      <%= value %>
-    </div>
-  <% end %>
-  <%= yield %>
+  <div id="wrapper">
+    <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %> error_msg">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <%= value %>
+      </div>
+    <% end %>
+    <%= yield %>
+  </div>
   <div class="clearfix"></div>
   <%= render 'layouts/footer' %>
 </body>

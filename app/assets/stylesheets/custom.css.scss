@@ -1,6 +1,6 @@
 /* Change the Universal Font */
-/* $baseFontFamily: Oxygen;
-@import url(http://fonts.googleapis.com/css?famly=Oxygen); */
+/*$baseFontFamily: 'Open Sans', sans-serif;
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600); */
 
 @import "bootstrap";
 @import "bootstrap-responsive";
@@ -27,12 +27,13 @@ p {
   line-height: 1.7em;
 }
 
-#wrapper {
-  margin: 0px 30px;
-}
-
 body {
   background: #E6E6E6 url("http://sparrowmailapp.com/img/bg-noise.gif");
+}
+
+#isotope-container {
+  margin:auto;
+  width: 90%;
 }
 
 /* HEADER
@@ -168,7 +169,7 @@ body {
 .how_to {
   border-bottom: 1px solid $lightGray;
   margin: 0px;
-  padding: 8%;
+  padding: 5%;
   img {
     margin-left: 50px;
   }
@@ -286,10 +287,11 @@ input {
   background: #505050;
 }
 
-.container-fluid {
+.user_profile {
   height: 230px;
   background-position: center;
   background-size:cover;
+  background-image: url(http://static.wixstatic.com/media/ec7c8a_142e7f03c2e9ac6bdcee270fe8056b71.jpg_srz_1425_556_85_22_0.50_1.20_0.00_jpg_srz);
   .profile_picture {
     border: 2px solid white;
     position: relative;
@@ -332,14 +334,10 @@ input {
   }
 }
 
-#masonry-container {
-  margin-left: 20px;
-}
-
 /* DESTINATION PAGE
 -------------------------------------------------- */
 
-.breadcrumb {
+/*.breadcrumb {
   margin-top: 10px;
   background: #505050;
 }
@@ -356,6 +354,15 @@ input {
 
 #index {
   background-color: #505050;
+}*/
+
+.destination_logo {
+  padding: 5%;
+  background-image: url("http://www.purple-stuff.info/wp-content/uploads/419o4pVQsdL.jpg");
+  font-size: 55px;
+  text-align: center;
+  text-shadow: 0 0 15px #202020;
+  color: #BEF781;
 }
 
 /* ADD BUTTON & CATEGORY BUTTON
@@ -366,33 +373,41 @@ input {
   top: 10px;
   left: 10px;
   z-index: 1000;
+  .button_text {
+    font-size: 12px;
+  }
 }
 
 /* JQUERY MASONRY
 -------------------------------------------------- */
 
 .box {
-  margin: 5px;
-  padding: 5px;
+  margin: 10px;
   font-size: 11px;
   line-height: 1.4em;
   float: left;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
   box-shadow: 1px 1px 10px #444;
-  width: 214px;
+  width: 236px;
 
   img {
     width: 100%;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
   }
-}
 
-.description {
-    margin: 10px 0 5px;
+  img:hover {
+    cursor: -webkit-zoom-in;
+    cursor: -moz-zoom-in;
+    cursor: zoom-in;
+  }
+
+  .pin_text {
+    margin-left: 10px;
+    font-size: 11px;
+  }
+
+  .description {
+    margin: 10px 10px 5px;
+    font-size: 13px;
+  }
 }
 
 /* JQUERY ISOTOPE CSS
@@ -436,7 +451,7 @@ input {
 }
 
 /**** disable CSS transitions for containers with infinite scrolling*/
-.isotope.infinite-scrolling {
+.isotope.infinitescrolling {
   -webkit-transition: none;
      -moz-transition: none;
       -ms-transition: none;

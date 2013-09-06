@@ -6,21 +6,17 @@
       <div class="nav-collapse collapse">
       <!-- If the user is signed in display the following  -->
       <% if user_signed_in? %>
-        <ul class="nav">
-          <li><a href="">Travelbook</a></li>
-          <li><%= link_to "Destinations", pins_path %></li>
-          <li><a href="">Itinerary Builder</a></li>
-          <li><%= link_to "Add Pin", new_pin_path %></li>
-        </ul>
         <ul class="nav pull-right">
-          <li><%= link_to "Contact Us", contact_path %></li>
+          <li><%= link_to "+ Travel", new_pin_path %></li>
+          <li><%= link_to "Browse Destinations", pins_path %></li>
+          <li><a href="">Browse Itineraries</a></li>
           <li id="fat-menu" class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              Account <b class="caret"></b>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.first_name %><b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
-              <li><a href="">Profile</a></li>
-              <li><%= link_to "Setting", edit_user_registration_path %></li>
+              <li><%= link_to "My TravelFig", current_user %></li>
+              <li><%= link_to "My Setting", edit_user_registration_path %></li>
+              <li><%= link_to "Help", contact_path %></li>
               <li class="divider"></li>
               <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
             </ul>

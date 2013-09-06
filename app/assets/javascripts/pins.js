@@ -1,10 +1,10 @@
 $(document).ready(function(){
-	var $container = $('#isotope-container');
+  var $container = $('#isotope-container');
   $container.imagesLoaded(function(){
-  	$container.isotope({
-  		itemSelector: '.box',
-  	});
-  	$container.infinitescroll({
+    $container.isotope({
+      itemSelector: '.box'
+    });
+    $container.infinitescroll({
       navSelector  : '.pagination',    // selector for the paged navigation 
       nextSelector : '.next_page a',  // selector for the NEXT link (to page 2)
       itemSelector : '.box',     // selector for all items you'll retrieve
@@ -18,5 +18,5 @@ $(document).ready(function(){
         $container.isotope( 'appended', $( newElements ) ); 
       }
     );  
-  })
-});
+  });
+})

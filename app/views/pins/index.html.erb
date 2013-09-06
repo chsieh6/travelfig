@@ -1,5 +1,7 @@
 <% if user_signed_in? %>
-  <% provide(:title, 'All Pin') %>
+	<% provide(:title, 'Browse Destinations') %>
+  <h1 class="destination_logo">New Destinations = New Adventures!</h1>
+	<hr style="margin-top:5px"></hr>
   <div id="isotope-container">
     <%= render @pins %>
   </div>
