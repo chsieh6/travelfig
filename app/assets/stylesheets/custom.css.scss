@@ -3,7 +3,7 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600); */
 
 @import "bootstrap";
-@import "bootstrap-responsive";
+/*@import "bootstrap-responsive";*/
 
 $lightGray: #999;
 
@@ -29,11 +29,6 @@ p {
 
 body {
   background: #E6E6E6 url("http://sparrowmailapp.com/img/bg-noise.gif");
-}
-
-#isotope-container {
-  margin:auto;
-  width: 90%;
 }
 
 /* HEADER
@@ -358,7 +353,7 @@ input {
 
 .destination_logo {
   padding: 5%;
-  background-image: url("http://www.purple-stuff.info/wp-content/uploads/419o4pVQsdL.jpg");
+  background-image: url("http://www.commentnation.com/backgrounds/images/purple_random_circle_dots_seamless_background.jpg");
   font-size: 55px;
   text-align: center;
   text-shadow: 0 0 15px #202020;
@@ -381,32 +376,36 @@ input {
 /* JQUERY MASONRY
 -------------------------------------------------- */
 
-.box {
-  margin: 10px;
-  font-size: 11px;
-  line-height: 1.4em;
-  float: left;
-  box-shadow: 1px 1px 10px #444;
-  width: 236px;
-
-  img {
-    width: 100%;
-  }
-
-  img:hover {
-    cursor: -webkit-zoom-in;
-    cursor: -moz-zoom-in;
-    cursor: zoom-in;
-  }
-
-  .pin_text {
-    margin-left: 10px;
+#isotope-container {
+  margin:auto;
+  width: 90%;
+  .box {
+    margin: 10px;
     font-size: 11px;
-  }
+    line-height: 1.4em;
+    float: left;
+    box-shadow: 1px 1px 10px #444;
+    width: 236px;
 
-  .description {
-    margin: 10px 10px 5px;
-    font-size: 13px;
+    img {
+      width: 100%;
+    }
+
+    img:hover {
+      cursor: -webkit-zoom-in;
+      cursor: -moz-zoom-in;
+      cursor: zoom-in;
+    }
+
+    .pin_text {
+      margin-left: 10px;
+      font-size: 11px;
+    }
+
+    .description {
+      margin: 10px 10px 5px;
+      font-size: 13px;
+    }
   }
 }
 
