@@ -7,7 +7,7 @@
 	<%= link_to (image_tag pin.image(:medium)), pin %>
     <p class="description pin_text"><%= pin.descriptions %></p>
     <hr style="margin: 10px"></hr>
-    <p class="pin_text"><strong>Posted by <%= link_to pin.user.username, pin.user %></strong></p>
+    <p class="pin_text"><strong>Posted by <%= link_to pin.user.username, pin.user, class: "pin_link" %></strong></p>
 		<% if (current_user == pin.user) || (current_user.admin) %>
 		  <p class="pin_text">
 		  	<%= link_to 'Edit', edit_pin_path(pin) %>
