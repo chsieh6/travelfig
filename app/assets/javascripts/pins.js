@@ -1,9 +1,5 @@
 $(document).ready(function(){
 
-  var $container = $('#isotope-container');
-  $('#myTab a:first').tab('show');
-  loadPin();
-
   function pageLoad() {
     $('.category_button').hide();
     $('.add_button').hide();
@@ -32,6 +28,10 @@ $(document).ready(function(){
     pageLoad();
   }
 
+  var $container = $('#isotope-container');
+  $('#myTab a:first').tab('show');
+  loadPin();
+
   // Infinite Scroll setup with a isotope callback
   $container.infinitescroll({
     navSelector  : '.pagination',    // selector for the paged navigation 
@@ -54,6 +54,7 @@ $(document).ready(function(){
 
   $('.pin_link').click(function(){
     var nextPage = $(this).attr('href');
+    console.log(nextPage);
     location.replace(nextPage);
     location.reload;
   });

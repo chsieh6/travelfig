@@ -1,6 +1,6 @@
 /* Change the Universal Font */
-/*$baseFontFamily: 'Droid Serif', sans-serif;
-@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700);*/
+/*$baseFontFamily: 'Open Sans', Verdana, Helvetica, sans-serif;
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro|Open+Sans);*/
 
 @import "bootstrap";
 @import "bootstrap-responsive";
@@ -38,13 +38,15 @@ body {
 /* NAVIGATION BAR CONTENT */
 
 .navbar-wrapper {
-	margin-bottom: 50px
+	margin-bottom: 70px
 }
 
 /* Increase the brand/project name a bit */
 .navbar {
   /* Remove border and change up box shadow for more contrast */
   .navbar-inner {
+    padding-top: 10px;
+    padding-bottom: 10px;
     opacity: 0.9;
     -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
        -moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
@@ -52,7 +54,7 @@ body {
   }
   .brand {
     padding: 14px 20px 16px 70px;
-    font-size: 25px;
+    font-size: 35px;
     font-weight: bold;
     text-shadow: 0 -1px 0 rgba(0,0,0,.5);
   }
@@ -330,28 +332,6 @@ input {
   }
 }
 
-/* DESTINATION PAGE
--------------------------------------------------- */
-
-/*.breadcrumb {
-  margin-top: 10px;
-  background: #505050;
-}
-
-.breadcrumb .dropdown .dropdown-toggle{
-  color: white;
-  text-shadow: none;
-}
-
-.breadcrumb .dropdown .active {
-  font-size: 35px;
-  font-weight: bold;
-}
-
-#index {
-  background-color: #505050;
-}*/
-
 .destination_logo {
   padding: 5%;
   background-image: url("http://www.commentnation.com/backgrounds/images/purple_random_circle_dots_seamless_background.jpg");
@@ -387,6 +367,7 @@ input {
     float: left;
     box-shadow: 1px 1px 10px #444;
     width: 236px;
+    background-color: white;
 
     img {
       width: 100%;
@@ -415,11 +396,11 @@ input {
 .isotope,
 .isotope .isotope-item {
   /* change duration value to whatever you like */
-  -webkit-transition-duration: 0.8s;
-     -moz-transition-duration: 0.8s;
-      -ms-transition-duration: 0.8s;
-       -o-transition-duration: 0.8s;
-          transition-duration: 0.8s;
+  -webkit-transition-duration: 0.3s;
+     -moz-transition-duration: 0.3s;
+      -ms-transition-duration: 0.3s;
+       -o-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 
 .isotope {

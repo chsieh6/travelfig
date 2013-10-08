@@ -13,7 +13,6 @@
         <ul class="nav pull-right">
           <li><%= link_to "+ Travel", new_pin_path %></li>
           <li><%= link_to "Browse Destinations", pins_path, class: "pin_link"%></li>
-          <li><a class="pin_link" href="">Browse Itineraries</a></li>
           <li id="fat-menu" class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.first_name %><b class="caret"></b>
             </a>
@@ -29,8 +28,7 @@
       <% else %>
         <ul class="nav pull-right">
           <li><%= link_to "Home", root_path %></li>
-          <li><%= link_to "Destinations", pins_path %></li>
-          <li><a href="#">Itinerary Builder</a></li>
+          <li><%= link_to "Destinations", new_user_session_path %></li>
           <li><%= link_to "Contact Us", contact_path %></li>
           <li><%= link_to "Sign In", new_user_session_path %></li>
         </ul>
