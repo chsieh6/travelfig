@@ -1,19 +1,20 @@
 $(document).ready(function(){
 
   function pageLoad() {
-    $('.category_button').hide();
+    $('.move_button').hide();
     $('.add_button').hide();
+    $('.like_button').hide();
       
     $('.box').hover(function(){
-      $($(this).find('.category_button')).show();
+      $($(this).find('.move_button')).show();
     }, function (){
-      $($(this).find('.category_button')).hide();
+      $($(this).find('.move_button')).hide();
     });
      //If it is not the current user
     $('.box').hover(function(){
-      $($(this).find('.add_button')).show();
+      $($(this).find('.add_button, .like_button')).show();
     }, function (){
-      $($(this).find('.add_button')).hide();
+      $($(this).find('.add_button, .like_button')).hide();
     });
   }
 
@@ -57,5 +58,10 @@ $(document).ready(function(){
     console.log(nextPage);
     location.replace(nextPage);
     location.reload;
+  }); 
+
+  $('.modal_image').click(function(){
+    $($(this).parentsUntil('.isotope-container').find('.modal-header')).find('.add_button', '.like_button').show();
+    $($(this).parentsUntil('.isotope-container').find('.modal-header')).find('.move_button').show();
   });
 })

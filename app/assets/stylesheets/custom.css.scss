@@ -28,7 +28,7 @@ p {
 }
 
 body {
-  background: #E6E6E6 url("/assets/tree_bark.png");
+  background: #E6E6E6 url("/assets/tweed.png");
   padding: 0px;
 }
 
@@ -72,11 +72,12 @@ body {
 /* FOOTER CONTENT
 -------------------------------------------------- */
 
-#footer {
-  background: black;
-  
+footer {
+  background-image: url('/assets/mochagrunge.png');
   p {
-    color: white;
+    border: 1px solid rgba(0,0,0,.4);
+    padding: 15px 0px;
+    margin: 10px 0px 0px 0px;
   }
 }
 
@@ -157,10 +158,11 @@ body {
       line-height: 100%;
       margin: 0px 20px;
       font-size: 70px;
-      color: #663333;
+      color: #bec5c8;
     }
     h2 {
       line-height: 90%;
+      color: white;
     }
   }
 }
@@ -176,16 +178,58 @@ body {
 /* ABOUT MORE CONTENT */
 
 .home_footer {
-  margin-top: 10px; 
+  margin-top: 30px; 
+  h4 {
+    color: #fff;
+    letter-spacing: .02em;
+    font-size: 20px;
+  }
   ul {
     margin-left: 0px;
     list-style-type: none;
     li{
       font-size: 13px;
       a{
-        color: black;
+        color: #bde2ff;
+        font-size: 15px;
+      }
+      a:hover {
+      color: #F07171;
       }
     }
+  }
+  #social{
+      li{
+        margin: 0 0 20px 0;
+        display: block;
+        width: 280px;
+        line-height: 20px;
+        a{
+          display: block;
+          width: 160px;
+          padding: 20px 20px 20px 90px;
+          border: 1px solid rgba(0,0,0,.4);
+          text-decoration: none;
+          box-shadow: rgba(255,255,255,.1) 0 1px 0;
+          color: #f07171;
+          font-size: 18px;
+          -webkit-transition: background-color .1s linear;
+          strong{
+              display: block;
+              color: #fff;
+              font-size: 20px;
+          }
+        }
+      }
+      li#facebook a{
+        background: rgba(0,0,0,.2) url(/assets/facebook.png) no-repeat 20px 50%;
+      }
+      li#twitter a{
+        background: rgba(0,0,0,.2) url(/assets/twitter.png) no-repeat 20px 50%;
+      }
+      a:hover{
+        background-color: rgba(0,0,0,.4) !important;
+      }
   }
 }
 
@@ -239,6 +283,7 @@ body {
 .contact {
   h1 {
     text-align: center;
+    color: #bec5c8;
   }
 }
 
@@ -334,24 +379,34 @@ input {
 
 .destination_logo {
   padding: 5%;
-  background-image: url("http://www.commentnation.com/backgrounds/images/purple_random_circle_dots_seamless_background.jpg");
+  background-image: url("/assets/world-map-pins.jpg");
+  background-size: cover;
   font-size: 55px;
   text-align: center;
-  text-shadow: 0 0 15px #202020;
-  color: #BEF781;
+  color: black;
+  text-shadow: 2px 2px white;
+  border-bottom: 1px solid black;
+  box-shadow: 1px 1px 10px #444;
 }
 
-/* ADD BUTTON & CATEGORY BUTTON
+/* ADD BUTTON & CATEGORY BUTTON & LIKE BUTTON
 -------------------------------------------------- */
 
-.add_button, .category_button {
-  position: absolute;
+.add_button, .move_button {
+  position: fixed;
   top: 10px;
   left: 10px;
   z-index: 1000;
   .button_text {
-    font-size: 12px;
+    font-size: 13px;
   }
+}
+
+.like_button {
+  position: fixed;
+  top: 10px;
+  left: 70px;
+  z-index: 1000;
 }
 
 /* JQUERY ISOTOPE
@@ -478,6 +533,20 @@ input {
   .carousel-caption .lead,
   .carousel-caption .btn {
     font-size: 18px;
+  }
+}
+
+/* MODAL WINDOW
+-------------------------------------------------- */
+.modal {
+  left: 41%;
+  max-height: 80%;
+  width: 800px;
+  overflow-y: auto;
+
+  .modal-body {
+    max-height: none;
+    text-align: center;
   }
 }
 

@@ -1,17 +1,43 @@
 <div class="box">
 	<% if pin.user == current_user %>
-		<%= render 'pins/category_button' %>
+		<%= render 'pins/move_button' %>
 	<% else %>
 		<%= render 'pins/add_button' %>
+		<button class="btn btn-danger like_button">Like</button>
 	<% end %>
-	<%= link_to (image_tag pin.image(:medium)), pin %>
-    <p class="description pin_text"><%= pin.descriptions %></p>
-    <hr style="margin: 10px"></hr>
-    <p class="pin_text"><strong>Posted by <%= link_to pin.user.username, pin.user, class: "pin_link" %></strong></p>
+	<a href="#<%= pin.id %>" class="modal_image" data-toggle="modal"><%= image_tag pin.image(:medium) %></a>
+  <p class="description pin_text"><%= pin.descriptions %></p>
+  <hr style="margin: 10px"></hr>
+  <p class="pin_text"><strong>Posted by <%= link_to pin.user.username, pin.user, class: "pin_link" %></strong></p>
+	<% if (current_user == pin.user) || (current_user.admin) %>
+	  <p class="pin_text">
+	  	<%= link_to 'Edit', edit_pin_path(pin) %>
+	  	<%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </p>
+	<% end %>
+</div>
+
+<div id="<%= pin.id %>" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <div id="myModalLabel">
+    	<% if pin.user == current_user %>
+				<%= render 'pins/move_button' %>
+			<% else %>
+				<%= render 'pins/add_button' %>
+				<button class="btn btn-large btn-danger">Like</button>
+			<% end %>
+		</div>
+  </div>
+  <div class="modal-body">
+    <%= image_tag pin.image %>
+		<p><strong>Descriptions:</strong> <%= pin.descriptions %></p>
+		<p><strong>Posted by:</strong> <%= pin.user.username %></p>
 		<% if (current_user == pin.user) || (current_user.admin) %>
-		  <p class="pin_text">
-		  	<%= link_to 'Edit', edit_pin_path(pin) %>
-		  	<%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %>
-	    </p>
+			<%= link_to 'Edit', edit_pin_path(pin) %> |
 		<% end %>
+		<%= link_to 'Back', pins_path %>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
 </div>
