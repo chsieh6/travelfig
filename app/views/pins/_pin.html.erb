@@ -1,8 +1,12 @@
 <div class="box">
 	<% if pin.user == current_user %>
-		<%= render 'pins/move_button' %>
+		<div class="move_button">
+			<%= render 'pins/move_button' %>
+		</div>
 	<% else %>
-		<%= render 'pins/add_button' %>
+		<div class="add_button">
+			<%= render 'pins/add_button' %>
+		</div>
 		<button class="btn btn-danger like_button">Like</button>
 	<% end %>
 	<a href="#<%= pin.id %>" class="modal_image" data-toggle="modal"><%= image_tag pin.image(:medium) %></a>

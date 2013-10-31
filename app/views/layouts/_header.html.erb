@@ -31,9 +31,9 @@
     <!-- If the user is not signed in, display the following -->
     <% else %>
     <ul class="nav navbar-nav navbar-right">
-      <li><%= link_to "Home", root_path %></li>
-      <li><%= link_to "Destinations", new_user_session_path %></li>
-      <li><%= link_to "About", about_path %></li>
+      <li><a href="#" id="introbtn">About</a></li>
+      <li><a href="#" id="servicesbtn">Why TravelFig</a></li>
+      <li><a href="#" id="portfoliobtn">Examples</a></li>
       <li><a href="#" id="contactbtn">Contact</a></li>
       <li><%= link_to "Sign In", new_user_session_path %></li>
     </ul>

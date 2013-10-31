@@ -24,3 +24,6 @@ doc/
 
 # Ignore sampleimages via faker gems 
 /sampleimages
+
+# Ignore development CSS 
+/app/stylesheets/development.css.scss

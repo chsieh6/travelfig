@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(function(){
 
   // Declare Scroll Animation 
   function scroll_to(div){
@@ -64,6 +64,21 @@ $(document).ready(function(){
   // Scrolling Animation Action
   $("#topbtn").click(function(){
     scroll_to("#top");
+    return false;
+  });
+
+  $("#introbtn").click(function(){
+    scroll_to("#intro");
+    return false;
+  });
+
+  $("#servicesbtn").click(function(){
+    scroll_to("#services");
+    return false;
+  });
+
+  $("#porfoliobtn").click(function(){
+    scroll_to("#porfolio");
     return false;
   });
 

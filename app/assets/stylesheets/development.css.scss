@@ -1,11 +1,10 @@
+/* UNIVERSAL
+-------------------------------------------------- */
+
 /* Change the Universal Font */
 /*$baseFontFamily: 'Open Sans', Verdana, Helvetica, sans-serif;
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro|Open+Sans);*/
 
-
-
-/* UNIVERSAL
--------------------------------------------------- */
 
 @import url(http://fonts.googleapis.com/css?family=Lobster);
 $lightGray: #999;
@@ -111,28 +110,8 @@ body {
   background: #7fbbda;
   padding: 50px 0;
   color: #ffffff;
-}
 
-.service-item {
-  margin-bottom: 15px;
-
-  i.service-icon {
-    border: 3px solid #ffffff;
-    border-radius: 50%;
-    display: inline-block;
-    font-size: 56px;
-    width: 140px;
-    height: 140px;
-    line-height: 136px;
-    vertical-align: middle; 
-    text-align: center;
-  }
-
-  i.service-icon:hover {
-    font-size: 68px;
-  }
-
-  span {
+  h4 {
     font-size: 1.5em;
   }
 }
@@ -198,6 +177,14 @@ footer {
     height: 60px;
     width: 60px;
   }
+  .contact-text {
+    h4, a {
+      font-family: 'Lobster', cursive;
+    }
+    a {
+      font-size: 2em;
+    }
+  }
 }
 
 /* ABOUT US PAGE 
@@ -241,6 +228,7 @@ footer {
   background: url(/assets/background-ricepaper.png);
   img {
     margin: 0 auto;
+    height: 300px;
   }
 }
 
@@ -295,6 +283,15 @@ footer {
 -------------------------------------------------- */
 #error_explanation {
   color: red;
+}
+
+.zocial {
+  margin-bottom: 15px;
+  width: 230px;
+}
+
+.social_login {
+  padding: 45px 0px;
 }
 
 /* USER PROFILE

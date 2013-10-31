@@ -252,11 +252,9 @@ Devise.setup do |config|
 
   require "omniauth-facebook"
   OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE if Rails.env.development? 
-  # config.omniauth :facebook, "244145872408846", "9dbfe4980482e20e4765eb6fe40b20a7",
-  #     {:scope => 'email, offline_access', :client_options => {:ssl => {:ca_file => '/usr/lib/ssl/certs/ca-certificates.crt'}}}
   config.omniauth :facebook, "244145872408846", "9dbfe4980482e20e4765eb6fe40b20a7",
-      :client_options => {:ssl => {:ca_path => '/etc/ssl/certs'}}  
-  config.omniauth :facebook, "244145872408846", "9dbfe4980482e20e4765eb6fe40b20a7", :strategy_class => OmniAuth::Strategies::Facebook
+      {:scope => 'email, offline_access', :client_options => {:ssl => {:ca_file => '/usr/lib/ssl/certs/ca-certificates.crt'}}, :strategy_class => OmniAuth::Strategies::Facebook}
+
 
   require "omniauth-google-oauth2"
   config.omniauth :google_oauth2, "552614324079.apps.googleusercontent.com", "zJZiGIotoyxIkCcj-H0Am3y0", { access_type: "offline", approval_prompt: "" }

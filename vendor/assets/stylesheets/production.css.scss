@@ -1,0 +1,474 @@
+/* UNIVERSAL
+-------------------------------------------------- */
+
+/* Change the Universal Font */
+/*$baseFontFamily: 'Open Sans', Verdana, Helvetica, sans-serif;
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro|Open+Sans);*/
+
+
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+$lightGray: #999;
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+body {
+  background: url(https://s3.amazonaws.com/travelfig_heroku/images/home/background-wet_snow.png);
+  height: 100%;
+  width: 100%;
+  padding-top: 50px;
+}
+
+
+/* NAVIGATION BAR CONTENT 
+-------------------------------------------------- */
+
+/* Increase the brand/project name a bit */
+.navbar {
+  .navbar-brand {
+    padding: 14px 20px 16px 70px;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'Lobster', cursive;
+    text-shadow: 0 0 15px #202020;
+    color: #7fbbda;
+    span {
+      color: #00FF33;
+    }
+  }
+  .navbar-brand:hover {
+    color: #00FF33;
+    span {
+      color: #7fbbda;
+    }
+  }
+  /* Navbar links: increase padding for taller navbar */
+  .navbar-nav  li  a {
+    padding: 15px 20px;
+    font-size: 1.1em;
+  }
+
+  .dropdown-menu li  a {
+    padding: 3px 20px;
+  }
+}
+
+/* HOME PAGE
+-------------------------------------------------- */
+.vert-text {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  padding-top:25%;
+  padding-bottom: 25%;
+  text-shadow: 0 0 15px #202020;
+  line-height: 1.25;
+  color: #ffffff;
+
+  h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 4.5em;
+    font-weight: 700; 
+  }
+}
+
+/* Full Page Image Header Area */
+.header {
+  display: table;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: url(https://s3.amazonaws.com/travelfig_heroku/images/home/home-banner.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* Intro */
+.intro {
+  padding: 30px 0;
+}
+
+/* Services */
+.services {
+  background: #7fbbda;
+  padding: 50px 0;
+  color: #ffffff;
+
+  h4 {
+    font-size: 1.5em;
+  }
+}
+
+/* Callout */
+.callout {
+  color: #ffffff;
+  display: table;
+  height: 250px;
+  width: 100%;
+  background: url(https://s3.amazonaws.com/travelfig_heroku/images/home/home-section_two.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  
+  .callout-text {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    text-shadow: 0 0 15px #202020;
+    line-height: 1.25;
+    padding: 0px 50px;
+
+    h1 {
+      padding: 0;
+      margin: 0;
+      font-size: 4.5em;
+      font-weight: 700;
+    }
+  }
+}
+
+/* Portfolio */
+.portfolio {
+  padding: 50px 0;
+}
+
+.portfolio-item {
+  margin-bottom: 25px;
+}
+
+.img-portfolio {
+  margin: 0 auto;
+}
+
+
+/* Call to Action */
+.call-to-action {
+  color: #ffffff;
+  background: #0a5175;
+  padding: 50px 0;
+}
+
+.call-to-action .btn {
+  margin: 10px;
+}
+
+/* Footer */
+footer {
+  padding: 50px 0px 25px 0px;
+  img {
+    height: 60px;
+    width: 60px;
+  }
+  .contact-text {
+    h4, a {
+      font-family: 'Lobster', cursive;
+    }
+    a {
+      font-size: 2em;
+    }
+  }
+}
+
+/* ABOUT US PAGE 
+------------------------------------------------*/
+
+#aboutheader {
+  color: #ffffff;
+  display: table;
+  height: 250px;
+  width: 100%;
+  background: url(https://s3.amazonaws.com/travelfig_heroku/images/home/about-banner.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  border-bottom: 1px solid black;
+  box-shadow: 1px 1px 10px #444;
+  
+  #aboutheader-text {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    text-shadow: 2px 2px 15px #202020;
+    line-height: 1.25;
+
+    span {
+      color: #66FF66;
+    }
+
+    h1 {
+      padding: 0;
+      margin: 0;
+      font-size: 3.5em;
+      font-weight: 700;
+    }
+  }
+}
+
+#aboutcontent {
+  padding:50px 0px;
+  background: url(https://s3.amazonaws.com/travelfig_heroku/images/home/background-ricepaper.png);
+  img {
+    margin: 0 auto;
+    height: 300px;
+  }
+}
+
+#teamprofile {
+  padding:50px 0px;
+  background: url(https://s3.amazonaws.com/travelfig_heroku/images/home/background-retina_wood.png);
+  .container {
+    img {
+      margin: 0 auto;
+    }
+  }
+}
+
+/* PINS INDEX PAGE
+-------------------------------------------------- */
+
+#indexheader {
+  color: #ffffff;
+  display: table;
+  height: 200px;
+  width: 100%;
+  background: url(https://s3.amazonaws.com/travelfig_heroku/images/home/index-banner.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  border-bottom: 1px solid black;
+  box-shadow: 1px 1px 10px #444;
+  margin-bottom: 10px;
+  
+  #indexheader-text {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    text-shadow: 2px 2px 15px #202020;
+    line-height: 1.25;
+
+    span {
+      color: #66FF66;
+    }
+
+    h1 {
+      padding: 0;
+      margin: 0;
+      font-size: 3.5em;
+      font-weight: 700;
+    }
+  }
+}
+
+/* SIGN IN, SIGN UP
+-------------------------------------------------- */
+#error_explanation {
+  color: red;
+}
+
+.zocial {
+  margin-bottom: 15px;
+  width: 230px;
+}
+
+.social_login {
+  padding: 45px 0px;
+}
+
+/* USER PROFILE
+-------------------------------------------------- */
+
+.profileheader {
+  display: table;
+  height: 280px;
+  width: 100%;
+  background: url(https://s3.amazonaws.com/travelfig_heroku/images/home/profile-banner.jpg) no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  border-bottom: 1px solid black;
+  box-shadow: 1px 1px 10px #444;
+
+  .profileheader-image {
+    border: 2px solid white;
+    top: 100px;
+    left: 30px;
+    position: relative;
+    z-index: 1000;
+  }
+  h2 {
+    text-shadow: 0 0 15px #202020;
+    color: #fff;
+    top: -10px;
+    left: 150px;
+    position: relative;
+    z-index: 1000;
+  }
+}
+
+.nav-tabs.nav-justified {
+  padding: 2px;
+  margin-top: -43px;
+  margin-bottom: 10px;
+
+  li > a {
+      color: white;
+      border: 1px solid #dddddd;
+      border-bottom: none;
+      background: url(https://s3.amazonaws.com/travelfig_heroku/images/home/background-tweed.png);
+  }
+
+  li > a:hover {
+      opacity: 0.5;
+  }
+
+  li.active {
+    a {
+      color: white;
+      background: black;
+      border-bottom: none;
+    }
+    a:hover {
+      color: white;
+      opacity:1;
+    }
+  }
+}
+
+/* ADD BUTTON & CATEGORY BUTTON & LIKE BUTTON
+-------------------------------------------------- */
+
+.add_button, .move_button {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  .button_text {
+    font-size: 13px;
+  }
+}
+
+.like_button {
+  position: fixed;
+  top: 10px;
+  left: 70px;
+  z-index: 1000;
+}
+
+/* JQUERY ISOTOPE
+-------------------------------------------------- */
+
+#isotope-container {
+  margin: auto;
+  width: 90%;
+  .box {
+    margin: 10px;
+    font-size: 11px;
+    line-height: 1.4em;
+    float: left;
+    box-shadow: 1px 1px 10px #444;
+    width: 300px;
+    background-color: white;
+
+    img {
+      width: 100%;
+    }
+
+    img:hover {
+      cursor: -webkit-zoom-in;
+      cursor: -moz-zoom-in;
+      cursor: zoom-in;
+    }
+
+    .pin_text {
+      margin-left: 10px;
+      font-size: 11px;
+    }
+
+    .description {
+      margin: 10px 10px 5px;
+      font-size: 13px;
+    }
+  }
+}
+
+/* JQUERY ISOTOPE CSS
+-------------------------------------------------- */
+.isotope,
+.isotope .isotope-item {
+  /* change duration value to whatever you like */
+  -webkit-transition-duration: 0.3s;
+     -moz-transition-duration: 0.3s;
+      -ms-transition-duration: 0.3s;
+       -o-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:      -o-transform, opacity;
+          transition-property:         transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
+/**** disable CSS transitions for containers with infinite scrolling*/
+.isotope.infinitescrolling {
+  -webkit-transition: none;
+     -moz-transition: none;
+      -ms-transition: none;
+       -o-transition: none;
+          transition: none;
+}
+
+/* MODAL WINDOW
+-------------------------------------------------- */
+.modal-dialog {
+  width: 70%;
+  .modal-body {
+    img {
+      margin: 0 auto;
+    }
+  }
+}
+

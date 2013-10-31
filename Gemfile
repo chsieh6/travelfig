@@ -14,7 +14,6 @@ gem 'jbuilder', '1.0.2'
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
-gem 'omniauth-twitter'
 gem 'omniauth-google-oauth2'
 gem "paperclip", "~> 3.0"
 gem 'aws-sdk'

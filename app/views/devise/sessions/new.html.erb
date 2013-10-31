@@ -2,38 +2,48 @@
 
 <div class="container sign_in">
 	<div class="row">
-	  <div class="col-md-5 col-md-offset-3">
+	  <div class="col-md-8 col-md-offset-2">
 	  	<div class="panel panel-default">
-	  		<div class="panel-heading">
+	  		<div class="panel-heading text-center">
 	  			<h1>Sign in<br/><small>Get ready to <em>explore the world</em></small></h1>
 	  		</div>
 				<div class="panel-body">
-					<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-
-					  <div class="form-group">
-					  	<%= f.label :email %>
-					  	<%= f.email_field :email, class: "form-control" %>
+					<div class="row">
+						<div class="col-md-5">
+							<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+							  <div class="form-group">
+							  	<%= f.label :email %>
+							  	<%= f.email_field :email, class: "form-control" %>
+								</div>
+								<div class="form-group">
+									<%= f.label :password %>
+							  	<%= f.password_field :password, class: "form-control" %>
+								</div>
+							  <% if devise_mapping.rememberable? -%>
+								  <div class="form-group">
+								  	<div class="checkbox">
+								  		<%= f.check_box :remember_me %>
+								  		<%= f.label :remember_me %>
+								  	</div>
+								  </div>
+							  <% end -%>
+								<div class="form-group">
+							  	<%= f.submit "Sign in", class: "btn btn-primary" %>
+								</div>
+							<% end %>
 						</div>
-						<div class="form-group">
-							<%= f.label :password %>
-					  	<%= f.password_field :password, class: "form-control" %>
+						<div class="col-md-2 text-center">
+							<h1 style="line-height: 4em">OR</h1>
 						</div>
-					  <% if devise_mapping.rememberable? -%>
-					  <div class="form-group">
-					  	<div class="checkbox">
-					  		<%= f.check_box :remember_me %>
-					  		<%= f.label :remember_me %>
-					  	</div>
-					  </div>
-					  <% end -%>
-						<div class="form-group">
-					  	<%= f.submit "Sign in", class: "btn btn-primary" %>
-						<% end %>
+						<div class="col-md-5 text-center social_login">
+							<a class="btn btn-facebook zocial facebook" href="/users/auth/facebook">Sign in with Facebook</a>
+							<a class="btn btn-facebook zocial twitter" href="#">Sign in with Twitter</a>
+							<a class="btn btn-facebook zocial googleplus" href="#">Sign in with Google</a>
+						</div>
 					</div>
 				</div>
 				<div class="panel-footer">
 					<%= render "devise/shared/links" %>
-					<%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
 				</div>
 			</div>
 		</div>
