@@ -4,7 +4,7 @@ Devise.setup do |config|
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class with default "from" parameter.
-  config.mailer_sender = "please-change-me-at-config-initializers-devise@example.com"
+  config.mailer_sender = "support@travelfig.com"
 
   # Configure the class responsible to send e-mails.
   # config.mailer = "Devise::Mailer"
@@ -249,4 +249,18 @@ Devise.setup do |config|
   # When using omniauth, Devise cannot automatically set Omniauth path,
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = "/my_engine/users/auth"
+
+  require "omniauth-facebook"
+  OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE if Rails.env.development? 
+  # config.omniauth :facebook, "244145872408846", "9dbfe4980482e20e4765eb6fe40b20a7",
+  #     {:scope => 'email, offline_access', :client_options => {:ssl => {:ca_file => '/usr/lib/ssl/certs/ca-certificates.crt'}}}
+  config.omniauth :facebook, "244145872408846", "9dbfe4980482e20e4765eb6fe40b20a7",
+      :client_options => {:ssl => {:ca_path => '/etc/ssl/certs'}}  
+  config.omniauth :facebook, "244145872408846", "9dbfe4980482e20e4765eb6fe40b20a7", :strategy_class => OmniAuth::Strategies::Facebook
+
+  require "omniauth-google-oauth2"
+  config.omniauth :google_oauth2, "552614324079.apps.googleusercontent.com", "zJZiGIotoyxIkCcj-H0Am3y0", { access_type: "offline", approval_prompt: "" }
+
+  config.secret_key = 'bc6fc6bdf1f899a03fbf8089c03405d89afe733b78d03b87204e017dfc31e2d7ff63d5e65008dfb3b5ec0e5ca2fc731cf8a71c5d59972f9c2cda26637a5214db'
+
 end

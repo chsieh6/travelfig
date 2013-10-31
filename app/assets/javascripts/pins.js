@@ -1,5 +1,24 @@
 $(document).ready(function(){
 
+  // Declare Scroll Animation 
+  function scroll_to(div){
+    $('html, body').animate({
+      scrollTop: $(div).offset().top
+    },1000);
+  }
+
+  // Load all the pins on Isotope once the page is ready
+  function loadPin() {
+    $container.imagesLoaded(function(){
+      $container.isotope({
+        itemSelector: '.box'
+      });
+    });
+    // Load all the buttons that goes onto the pins
+    pageLoad();
+  }
+
+  // Function that loads all the buttons and its animation when hover overs the images
   function pageLoad() {
     $('.move_button').hide();
     $('.add_button').hide();
@@ -18,19 +37,8 @@ $(document).ready(function(){
     });
   }
 
-  // Load all the pins once the page is ready
-  function loadPin() {
-    $container.imagesLoaded(function(){
-      $container.isotope({
-        itemSelector: '.box'
-      });
-    });
-    // Load all the buttons that goes onto the pins
-    pageLoad();
-  }
-
+  // Start of Pin Initialization
   var $container = $('#isotope-container');
-  $('#myTab a:first').tab('show');
   loadPin();
 
   // Infinite Scroll setup with a isotope callback
@@ -43,7 +51,7 @@ $(document).ready(function(){
         img: 'http://i.imgur.com/qkKy8.gif'
       }
     },
-    // call Isotope as a callback
+    // Call Isotope as a callback to reorganize the pins
     function( newElements ) {
       var $newElems = $(newElements);
       $newElems.imagesLoaded(function(){
@@ -53,6 +61,21 @@ $(document).ready(function(){
     }
   );
 
+  // Scrolling Animation Action
+  $("#topbtn").click(function(){
+    scroll_to("#top");
+    return false;
+  });
+
+  $("#contactbtn").click(function(){
+    scroll_to("#contact");
+    return false;
+  });
+
+  // Initialize the nav-tabs on User Profile
+  $('#myTab a:first').tab('show');
+
+  // Model Window Resize & Buttons
   $('.pin_link').click(function(){
     var nextPage = $(this).attr('href');
     console.log(nextPage);
@@ -61,7 +84,7 @@ $(document).ready(function(){
   }); 
 
   $('.modal_image').click(function(){
-    $($(this).parentsUntil('.isotope-container').find('.modal-header')).find('.add_button', '.like_button').show();
+    $($(this).parentsUntil('.isotope-container').find('.modal-header')).find('.add_button').show();
     $($(this).parentsUntil('.isotope-container').find('.modal-header')).find('.move_button').show();
   });
 })

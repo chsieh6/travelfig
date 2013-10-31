@@ -17,27 +17,32 @@
 	<% end %>
 </div>
 
-<div id="<%= pin.id %>" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-header">
-    <div id="myModalLabel">
-    	<% if pin.user == current_user %>
-				<%= render 'pins/move_button' %>
-			<% else %>
-				<%= render 'pins/add_button' %>
-				<button class="btn btn-large btn-danger">Like</button>
-			<% end %>
-		</div>
-  </div>
-  <div class="modal-body">
-    <%= image_tag pin.image %>
-		<p><strong>Descriptions:</strong> <%= pin.descriptions %></p>
-		<p><strong>Posted by:</strong> <%= pin.user.username %></p>
-		<% if (current_user == pin.user) || (current_user.admin) %>
-			<%= link_to 'Edit', edit_pin_path(pin) %> |
-		<% end %>
-		<%= link_to 'Back', pins_path %>
-  </div>
-  <div class="modal-footer">
-    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+<div id="<%= pin.id %>" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="#myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+  	<div class="modal-content">
+  		<div class="modal-header">
+	    	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	    	<% if current_user == pin.user %>
+					<%= render 'pins/move_button' %>
+				<% else %>
+					<%= render 'pins/add_button' %>
+					<button class="btn btn-large btn-danger">Like</button>
+				<% end %>
+		  </div>
+		  <div class="modal-body">
+		    <%= image_tag pin.image, class: "img-responsive" %>
+				<p><strong>Descriptions:</strong> <%= pin.descriptions %></p>
+				<p><strong>Posted by:</strong> <%= pin.user.username %></p>
+		  </div>
+		  <div class="modal-footer">
+		  	<% if ((pin.user == current_user) || (current_user.admin)) %>
+					<%= link_to 'Edit', edit_pin_path(pin), class: "btn btn-warning" %>
+					<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+				<% else %>
+					<%= render 'pins/add_button' %>
+					<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+				<% end %>
+		  </div>
+  	</div>
   </div>
 </div>

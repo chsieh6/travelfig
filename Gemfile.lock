@@ -25,21 +25,19 @@ GEM
       multi_json (~> 1.3)
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
-    arel (4.0.0)
-    atomic (1.1.13)
-    aws-sdk (1.16.1)
+    arel (4.0.1)
+    atomic (1.1.14)
+    aws-sdk (1.23.0)
       json (~> 1.4)
-      nokogiri (< 1.6.0)
+      nokogiri (>= 1.4.4, < 1.6.0)
       uuidtools (~> 2.1)
     bcrypt-ruby (3.1.2)
-    bootstrap-sass (2.3.1.0)
-      sass (~> 3.2)
     bootstrap-will_paginate (0.0.9)
       will_paginate
     builder (3.1.4)
     climate_control (0.0.3)
       activesupport (>= 3.0)
-    cocaine (0.5.1)
+    cocaine (0.5.3)
       climate_control (>= 0.0.3, < 1.0)
     coffee-rails (4.0.0)
       coffee-script (>= 2.2.0)
@@ -48,17 +46,20 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
-    devise (3.0.3)
+    devise (3.1.1)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 3.2.6, < 5)
+      thread_safe (~> 0.1)
       warden (~> 1.2.3)
     erubis (2.7.0)
-    execjs (2.0.1)
+    execjs (2.0.2)
     faker (1.1.2)
       i18n (~> 0.5)
     faraday (0.8.8)
       multipart-post (~> 1.2.0)
+    font-awesome-rails (4.0.1.0)
+      railties (>= 3.2, < 5.0)
     hashie (2.0.5)
     hike (1.2.3)
     hirb (0.7.1)
@@ -69,7 +70,7 @@ GEM
     jquery-rails (2.2.1)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
-    json (1.8.0)
+    json (1.8.1)
     jwt (0.1.8)
       multi_json (>= 1.5)
     mail (2.5.4)
@@ -77,7 +78,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.25)
     minitest (4.7.5)
-    multi_json (1.7.9)
+    multi_json (1.8.2)
     multipart-post (1.2.0)
     nokogiri (1.5.10)
     oauth (0.4.7)
@@ -92,6 +93,9 @@ GEM
       rack
     omniauth-facebook (1.4.1)
       omniauth-oauth2 (~> 1.1.0)
+    omniauth-google-oauth2 (0.2.1)
+      omniauth (~> 1.0)
+      omniauth-oauth2
     omniauth-oauth (1.0.1)
       oauth
       omniauth (~> 1.0)
@@ -102,12 +106,12 @@ GEM
       multi_json (~> 1.3)
       omniauth-oauth (~> 1.0)
     orm_adapter (0.4.0)
-    paperclip (3.5.1)
+    paperclip (3.5.2)
       activemodel (>= 3.0.0)
       activesupport (>= 3.0.0)
-      cocaine (~> 0.5.0)
+      cocaine (~> 0.5.3)
       mime-types
-    pg (0.16.0)
+    pg (0.17.0)
     polyglot (0.3.3)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -126,7 +130,7 @@ GEM
       rails_serve_static_assets
       rails_stdout_logging
     rails_serve_static_assets (0.0.1)
-    rails_stdout_logging (0.0.2)
+    rails_stdout_logging (0.0.3)
     railties (4.0.0.rc1)
       actionpack (= 4.0.0.rc1)
       activesupport (= 4.0.0.rc1)
@@ -135,7 +139,7 @@ GEM
     rake (10.1.0)
     rdoc (3.12.2)
       json (~> 1.4)
-    sass (3.2.10)
+    sass (3.2.12)
     sass-rails (4.0.0.rc1)
       railties (>= 4.0.0.beta, < 5.0)
       sass (>= 3.1.10)
@@ -144,21 +148,18 @@ GEM
     sdoc (0.3.20)
       json (>= 1.1.3)
       rdoc (~> 3.10)
-    simple_form (3.0.0.rc)
-      actionpack (>= 4.0.0.rc1, < 4.1)
-      activemodel (>= 4.0.0.rc1, < 4.1)
     sprockets (2.10.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-    sprockets-rails (2.0.0)
+    sprockets-rails (2.0.1)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
     sqlite3 (1.3.7)
     thor (0.18.1)
-    thread_safe (0.1.2)
+    thread_safe (0.1.3)
       atomic
     tilt (1.4.1)
     treetop (1.4.15)
@@ -166,7 +167,7 @@ GEM
       polyglot (>= 0.3.1)
     turbolinks (1.1.1)
       coffee-rails
-    tzinfo (0.3.37)
+    tzinfo (0.3.38)
     uglifier (2.1.1)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
@@ -180,16 +181,17 @@ PLATFORMS
 
 DEPENDENCIES
   aws-sdk
-  bootstrap-sass (= 2.3.1.0)
   bootstrap-will_paginate (= 0.0.9)
   coffee-rails (= 4.0.0)
   devise
   faker (= 1.1.2)
+  font-awesome-rails
   hirb
   jbuilder (= 1.0.2)
   jquery-rails (= 2.2.1)
   omniauth
   omniauth-facebook
+  omniauth-google-oauth2
   omniauth-twitter
   paperclip (~> 3.0)
   pg
@@ -198,7 +200,6 @@ DEPENDENCIES
   rails_12factor (= 0.0.2)
   sass-rails (= 4.0.0.rc1)
   sdoc (= 0.3.20)
-  simple_form (= 3.0.0.rc)
   sqlite3 (= 1.3.7)
   turbolinks (= 1.1.1)
   uglifier (= 2.1.1)

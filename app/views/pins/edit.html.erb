@@ -1,13 +1,20 @@
 <% provide(:title, 'Edit Pin') %>
 <div class="container edit_pin">
   <div class="row">
-    <div class="span7 offset2">
-			<h1>Editing pin</h1>
-
-			<%= render 'form' %>
-
-			<%= link_to 'Show', @pin %> |
-			<%= link_to 'Back', pins_path %>
+    <div class="col-md-7 col-md-offset-2">
+    	<div class="panel panel-default">
+    		<div class="panel-heading">
+    			<h1>Editing pin</h1>
+    		</div>
+	    	<div class="panel-body">
+	    		<%= render 'form' %>
+					<%= link_to 'Show', @pin %> |
+					<%= link_to 'Back', pins_path %>
+				</div>
+				<div class="panel-footer">
+					<h5>Not a Good Pin? <br/><br/> <%= button_to "Delete Pin", pin_path(@pin), :data => { :confirm => "Are you sure? No turning back if you press the button!" }, class: "btn btn-danger", :method => :delete %></h5>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

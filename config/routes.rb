@@ -1,17 +1,17 @@
 Travelfig::Application.routes.draw do
   get "users/show"
+  get "static_pages/home"
+  get "static_pages/about"
+  get "static_pages/contact"
   resources :pins
 
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   get 'users/:id' => 'users#show', as: :user
 
-  get "static_page/invite"
-  get "static_pages/home"
-  get "static_pages/contact"
-
   root to: 'pins#index'
-  get '/beta', to: 'static_pages#beta'
-  get '/contact',   to: 'static_pages#contact'
+  get '/home', to: 'static_pages#home'
+  get '/about', to: 'static_pages#about'
+  get '/contact', to: 'static_pages#contact'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

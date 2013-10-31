@@ -1,7 +1,7 @@
 <% provide(:title, 'The Pin') %>
 <div class="container show_pin">
   <div class="row">
-    <div class="span7 offset2 well">
+    <div class="col-md-7 col-md-offset-2 well">
   		<%= image_tag @pin.image %>
 			<p><strong>Descriptions:</strong><%= @pin.descriptions %></p>
 			<p><strong>Pinned by:</strong><%= @pin.user.username %></p>

@@ -1,10 +1,22 @@
+<!-- If the User is signed in then display pins -->
 <% if user_signed_in? %>
-	<% provide(:title, 'Browse Destinations') %>
-  <h1 class="destination_logo">New Destinations = New Adventures!</h1>
+	<% provide(:title, 'Destinations') %>
+	<!-- Index Pin Header -->
+	<div id="indexheader">
+		<div id="indexheader-text">
+			<h1>Every <span><em>New Destination</em></span> is a <span><em>New Experience</em></span></h1>
+		</div>
+	</div>
+	<!-- /Index Pin Header  -->
+
+	<!-- Display All Pins -->
   <div id="isotope-container">
     <%= render @pins %>
   </div>
   <%= will_paginate @pins %>
+	<!-- /Display All Pins -->
+
+<!-- If user is not signed in then display homepage -->
 <% else %>
-  <%= render 'static_pages/beta' %>
+  <%= render 'static_pages/home' %>
 <% end %> 

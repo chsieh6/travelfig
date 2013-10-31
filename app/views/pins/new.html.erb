@@ -1,14 +1,16 @@
 <% provide(:title, 'New Pin') %>
 <div class="container new_pin">
   <div class="row">
-    <div class="span7 offset2 well">
-			<div class="page-header">
-				<h1>Create a new TravelPin<br/><small>Document your travel</small></h1>
+    <div class="col-md-7 col-md-offset-2">
+    	<div class="panel panel-default">
+				<div class="panel-heading">
+					<h1>Create a new TravelPin<br/><small>Document your travel</small></h1>
+				</div>
+				<%= render 'form' %>
+				<div class="panel-footer">
+				  <%= link_to 'Back', pins_path %>
+				</div>
 			</div>
-
-			<%= render 'form' %>
-
-			<%= link_to 'Back', pins_path %>
 		</div>
 	</div>
 </div>

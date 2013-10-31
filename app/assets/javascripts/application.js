@@ -15,5 +15,5 @@
 //= require jquery.isotope.min.js
 //= require jquery.infinitescroll.min.js
 //= require turbolinks
-//= require bootstrap
+//= require bootstrap.min.js
 //= require_tree .

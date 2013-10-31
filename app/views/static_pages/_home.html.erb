@@ -1,121 +1,136 @@
 <% provide(:title, 'Home') %>
 
-<div id="myCarousel" class="carousel slide">
-	<div class="carousel-inner">
-		<div class="item">
-			<img src="https://s3.amazonaws.com/travelfig_heroku/images/home/banner1.jpg">
-			<div class="container">
-				<div class="carousel-caption">
-					<h1>TRANFORM TRAVEL PLANNING</h1>
-					<p class="lead">Browse all of the travel destination, local eats, and sample itineraries</p>
-					<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-large btn-primary" %>
-				</div>
-			</div>
-		</div>
-		<div class="item active">
-			<img src="https://s3.amazonaws.com/travelfig_heroku/images/home/banner2.jpg">
-			<div class="container">
-				<div class="carousel-caption">
-					<h1>TRANFORM TRAVEL PLANNING</h1>
-					<p class="lead">Browse all of the travel destination, local eats, and sample itineraries</p>
-					<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-large btn-primary" %>
-				</div>
-			</div>
-		</div>
-		<div class="item">
-			<img src="https://s3.amazonaws.com/travelfig_heroku/images/home/banner3.jpg">
-			<div class="container">
-				<div class="carousel-caption">
-					<h1>TRANFORM TRAVEL PLANNING</h1>
-					<p class="lead">Browse all of the travel destination, local eats, and sample itineraries</p>
-					<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-large btn-primary" %>
-				</div>
-			</div>
-		</div>
-	</div>
-	<a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-	<a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
-</div> <!--End of the Carousel -->
+<!-- Full Page Image Header Area -->
+<div id="top" class="header">
+  <div class="vert-text full_page">
+    <h1>Create a TravelBook</h1>
+    <h3><em>We</em> Create The Network, <em>You</em> Make Them Better</h3>
+    <%= link_to "Sign In Now", new_user_session_path, class: "btn btn-primary btn-lg" %>
+  </div>
+</div>
+<!-- /Full Page Image Header Area -->
 
-<div class="home_module how_to">
-	<div class="container">
-		<div class="row">
-			<div class="span1">
-				<span class="number">1.</span>
-			</div>
-			<div class="span6">
-				<h2>Create an Travebook<br/>
-				<small>Running out of places to visit?  Don't know where to go for your dream vacation? Join Travelfig to find where you can go next!</small></h2>
-			</div>
-			<div class="span5">
-				<img src="https://s3.amazonaws.com/travelfig_heroku/images/home/module1.jpg" class="img-polaroid">
-			</div>
-		</div>
-	</div>
+<!-- Intro -->
+<div id="intro" class="intro">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4 text-center">
+        <h2>Our Goals</h2>
+        <hr style="border-top: 1px solid black">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1 text-center">
+        <h3 class="lead">It is a social travel platform that allow individual to document their travel plans from blogging to creating a detail recommended itinerary.  It enables individual to leverage their social graph to streamline their next travel planning.  No more suggestions on one restaurant or one tourist spot from various of travel website, we want you to have the fully planned out itinerary that your friend had been to!</h3>
+      </div>
+    </div>
+  </div>
 </div>
-<div class="home_module how_to">
-	<div class="container">
-		<div class="row">
-			<div class="span5">
-				<img src="https://s3.amazonaws.com/travelfig_heroku/images/home/module2.jpg" class="img-polaroid">
-			</div>
-			<div class="span1">
-				<span class="number">2.</span>
-			</div>
-			<div class="span6">
-				<h2>Start recommending trips & blog <br/>
-				<small>Unfamiliar with a new area and but want to experience local cuisine?  With thousands of pictures of local cuisines, you can plan your meals at ease!</small></h2>
-			</div>
-		</div>
-	</div>
+<!-- /Intro -->
+
+<!-- Services -->
+<div id="services" class="services">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4 text-center">
+        <h2>Our Network</h2>
+        <hr>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 text-center">
+        <div class="service-item">
+          <i class="service-icon fa fa-rocket"></i>
+          <h4><span>1.</span> Create a Travelbook</h4>
+          <p>Did your navigation system shut down in the middle of that asteroid field? We can repair any dings and scrapes to your spacecraft!</p>
+        </div>
+      </div>
+      <div class="col-md-3 text-center">
+        <div class="service-item">
+          <i class="service-icon fa fa-magnet"></i>
+          <h4><span>2.</span> Upload Trips</h4>
+          <p>Need to know how magnets work? Our problem solving solutions team can help you identify problems and conduct exploratory research.</p>
+        </div>
+      </div>
+      <div class="col-md-3 text-center">
+        <div class="service-item">
+          <i class="service-icon fa fa-shield"></i>
+          <h4><span>3.</span> Write Trip Content</h4>
+          <p>Planning a time travel trip to the middle ages? Preserve the space time continuum by blending in with period accurate armor and weapons.</p>
+        </div>
+      </div>
+      <div class="col-md-3 text-center">
+        <div class="service-item">
+          <i class="service-icon fa fa-pencil"></i>
+          <h4><span>4.</span> Start Adding Friends!</h4>
+          <p>We've been voted the best pencil sharpening service for 10 consecutive years. If you have a pencil that feels dull, we'll get it sharp!</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-<div class="home_module how_to">
-	<div class="container">
-		<div class="row">
-			<div class="span1">
-				<span class="number">3.</span>
-			</div>
-			<div class="span6">
-				<h2>Search for other recommendations<br/>
-				<small>Don't you just hate spending days building a itinerary for a place you never visited?  Check out some of the sample itinerary to jumpstart planning your trip!</small></h2>
-			</div>
-			<div class="span5">
-				<img src="https://s3.amazonaws.com/travelfig_heroku/images/home/module3.jpg" class="img-polaroid">
-			</div>
-		</div>
-	</div>
+<!-- /Services -->
+
+<!-- Callout -->
+<div class="callout">
+  <div class="callout-text">
+    <h2><em>"TravelFig is a great place for me to write my travel stories and recommendations.  It is also easy for me to find other relevant travel itineraries."</em></h2>
+    <h3>- Someone Who Travels Often
+  </div>
 </div>
-<div class="container home_footer">
-	<div class="row">
-		<div class="span3">
-			<h4>For Travelers</h4>
-			<ul>
-				<li><a href="#">Sign Up</a></li>
-				<li><a href="">How does it work?</a></li>
-				<li><a href="#">Share recommendations</a></li>
-			</ul>
-		</div>
-		<div class="span3">
-			<h4>For Businesses</h4>
-			<ul>
-				<li><a href="">Post your itinerary</a></li>
-				<li><a href="">How can we partner?</a></li>
-			</ul>
-		</div>
-		<div class="span3">
-			<h4>About Travelfig</h4>
-			<ul>
-				<li><a href="">Blog</a></li>
-				<li><a href="">Team</a></li>
-				<li><a href="">Contact Us</a></li>
-				<li><a href="">Privacy Policy</a></li>
-			</ul>
-		</div>
-		<div class="span3">
-			<ul id="social">
-				<li id="twitter"><a href="">Follow Us <strong>on Twitter</strong></a></li>
-				<li id="facebook"><a href="">Connect with Us <strong>on Facebook</strong></a></li>
-			</ul>
-		</div>
-	</div> <!-- /.row -->
-</div> <!-- /.container -->
+<!-- /Callout -->
+
+<!-- Portfolio -->
+<div id ="portfolio" class="portfolio">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4 text-center">
+        <h2>Our Work</h2>
+        <hr>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 col-md-offset-2 text-center">
+        <div class="portfolio-item">
+          <a href="#top"><img class="img-portfolio img-responsive" src="/assets/home-portfolio-1.jpg"></a>
+          <h4>Cityscape</h4>
+        </div>
+      </div>
+      <div class="col-md-4 text-center">
+        <div class="portfolio-item">
+          <a href="#top"><img class="img-portfolio img-responsive" src="/assets/home-portfolio-2.jpg"></a>
+          <h4>Is That On Fire?</h4>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 col-md-offset-2 text-center">
+        <div class="portfolio-item">
+          <a href="#top"><img class="img-portfolio img-responsive" src="/assets/home-portfolio-3.jpg"></a>
+          <h4>Stop Sign</h4>
+        </div>
+      </div>
+      <div class="col-md-4 text-center">
+        <div class="portfolio-item">
+          <a href="#top"><img class="img-portfolio img-responsive" src="/assets/home-portfolio-4.jpg"></a>
+          <h4>Narrow Focus</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /Portfolio -->
+
+<!-- Call to Action -->
+<div class="call-to-action">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 text-center">
+        <h3>Don't Hesitate Anymore!  Come Join Us!</h3>
+        <a href="/users/sign_up" class="btn btn-lg btn-default">Sign Up Now</a>
+        <button id="topbtn" class="btn btn-lg btn-primary">Back Top</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /Call to Action -->

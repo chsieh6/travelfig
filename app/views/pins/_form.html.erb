@@ -1,14 +1,31 @@
-<%= simple_form_for(@pin) do |f| %>
-  <%= f.error_notification %>
-  <%= f.full_error :image_file_size, class: "alert alert-error" %>
-  <%= f.full_error :image_content_type, class: "alert alert-error" %>
+<div class="panel-body">
+	<%= form_for(@pin) do |f| %>
+  <% if @pin.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pin.errors.count, "error") %> prohibited this pin from being saved:</h2>
 
-  <%= f.input :image, label: "Upload an image" %>
-  <%= f.input :image_remote_url, label: "or Upload by URL" %>
+      <ul>
+      <% @pin.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+	<div class="form-group">
+		<%= f.label :image, "Upload File" %>
+		<%= f.file_field :image, class: "form-control" %>
+	</div>
+  <div class="form-group">
+  	<%= f.label :image_remote_url, "Or..Upload From a Website" %>
+  	<%= f.text_field :image_remote_url, class: "form-control" %>
+	</div>
+	<div class="form-group">
+		<%= f.label :descriptions %>
+  	<%= f.text_area :descriptions, class: "form-control" %>
+	</div>
+	<div class="form-group">
+  	<%= f.submit "Submit", class: "btn btn-primary" %>
+    <% end %>
+	</div>
+</div>
 
-  <%= f.input :descriptions, as: :text, input_html: { row: "5"} %>
-
-  <div class="form-actions">
-    <%= f.button :submit, class: "btn btn-primary" %>
-  </div>
-<% end %>
