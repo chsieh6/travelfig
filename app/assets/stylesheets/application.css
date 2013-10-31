@@ -11,6 +11,5 @@
  *= require zocial.css
  *= require bootstrap.min.css
  *= require production.css.scss
- *= require_self
  *= require_tree .
  */
