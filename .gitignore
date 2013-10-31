@@ -26,4 +26,4 @@ doc/
 /sampleimages
 
 # Ignore development CSS 
-/app/stylesheets/development.css.scss
+/app/assets/stylesheets/development.css.scss
