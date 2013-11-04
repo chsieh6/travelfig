@@ -88,18 +88,16 @@ $(function(){
   });
 
   // Initialize the nav-tabs on User Profile
-  $('#myTab a:first').tab('show');
+  $('#userTab a:first').tab('show');
 
-  // Model Window Resize & Buttons
+  // Initialize the nav-tabs on User Profile
+  $('#bookTab a:first').tab('show');
+  
+  // Window Reload when the user profile is clicked
   $('.pin_link').click(function(){
     var nextPage = $(this).attr('href');
-    console.log(nextPage);
     location.replace(nextPage);
     location.reload;
   }); 
 
-  $('.modal_image').click(function(){
-    $($(this).parentsUntil('.isotope-container').find('.modal-header')).find('.add_button').show();
-    $($(this).parentsUntil('.isotope-container').find('.modal-header')).find('.move_button').show();
-  });
 })

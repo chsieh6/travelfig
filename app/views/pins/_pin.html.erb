@@ -9,7 +9,7 @@
 		</div>
 		<button class="btn btn-danger like_button">Like</button>
 	<% end %>
-	<a href="#<%= pin.id %>" class="modal_image" data-toggle="modal"><%= image_tag pin.image(:medium) %></a>
+	<a href="#<%= pin.id %>" class="modal_image" data-toggle="modal"><%= image_tag pin.image(:medium), class: "book-image" %></a>
   <p class="description pin_text"><%= pin.descriptions %></p>
   <hr style="margin: 10px"></hr>
   <p class="pin_text"><strong>Posted by <%= link_to pin.user.username, pin.user, class: "pin_link" %></strong></p>
@@ -26,25 +26,38 @@
   	<div class="modal-content">
   		<div class="modal-header">
 	    	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-	    	<% if current_user == pin.user %>
-					<%= render 'pins/move_button' %>
-				<% else %>
-					<%= render 'pins/add_button' %>
-					<button class="btn btn-large btn-danger">Like</button>
-				<% end %>
+				<h2 class="text-center"><%= pin.descriptions%></h2>
 		  </div>
 		  <div class="modal-body">
-		    <%= image_tag pin.image, class: "img-responsive" %>
-				<p><strong>Descriptions:</strong> <%= pin.descriptions %></p>
-				<p><strong>Posted by:</strong> <%= pin.user.username %></p>
+		  	<ul class="nav nav-tabs nav-justified book-profile" id="bookTab">
+					<li class="active"><a href="#photo" data-toggle="tab">Photo Album</a></li>
+					<li><a href="#blog" data-toggle="tab">Travel Diary</a></li>
+					<li><a href="#recommendations" data-toggle="tab">Tips & Tricks</a></li>
+				</ul>	
+				<div class="tab-content">
+				  <div class="tab-pane fade active in" id="photo">
+				  	<%= image_tag pin.image, class: "img-responsive" %>
+				  </div>
+				  <div class="tab-pane fade" id="blog">
+				  	<p>Literally aesthetic Intelligentsia sriracha, next level asymmetrical cray Tonx freegan fap. Selfies Neutra blog narwhal sartorial. Squid mustache gluten-free, small batch wolf slow-carb typewriter actually banh mi twee readymade pork belly. Freegan keffiyeh tattooed locavore hella tousled McSweeney's, Odd Future viral iPhone art party readymade flannel +1 disrupt. Occupy banjo hashtag Etsy, keffiyeh direct trade ethical 3 wolf moon cred mustache cardigan narwhal chambray. Schlitz fingerstache tattooed umami, irony YOLO stumptown keytar authentic Helvetica wayfarers selvage. PBR&B Godard deep v, church-key wolf aesthetic swag.<br/><br/>Neutra twee blog keffiyeh polaroid, Godard artisan art party selfies 90's tousled fap photo booth food truck. McSweeney's High Life swag, meh biodiesel PBR Helvetica Shoreditch Echo Park. Scenester Terry Richardson viral keytar squid meggings, wayfarers artisan gluten-free photo booth PBR&B. 8-bit twee swag, 90's iPhone next level stumptown literally cliche banh mi. Truffaut food truck chia, forage pickled deep v beard PBR&B selfies ugh ennui whatever flannel. Authentic small batch Truffaut raw denim wayfarers trust fund. Vegan flexitarian Marfa sriracha, asymmetrical brunch letterpress.</p>
+				  </div>
+				  <div class="tab-pane fade" id="recommendations">
+				  	<h2>Day 1:</h2><br/><br/>
+				  	<h2>Day 2:</h2><br/><br/>
+				  	<h2>Day 3:</h2><br/><br/>
+				  </div>
+				</div>
+				<hr>
+				<h4 class="text-center"><strong>Posted by:</strong> <%= pin.user.username %></h4>
 		  </div>
 		  <div class="modal-footer">
 		  	<% if ((pin.user == current_user) || (current_user.admin)) %>
 					<%= link_to 'Edit', edit_pin_path(pin), class: "btn btn-warning" %>
-					<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+					<%= render 'pins/move_button' %>
+					<button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Close</button>
 				<% else %>
 					<%= render 'pins/add_button' %>
-					<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+					<button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Close</button>
 				<% end %>
 		  </div>
   	</div>
