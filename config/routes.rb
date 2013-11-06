@@ -1,9 +1,14 @@
 Travelfig::Application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
   get "users/show"
   get "static_pages/home"
   get "static_pages/about"
   get "static_pages/contact"
-  resources :pins
+  
+  resources :pins do
+    resources :diaries
+    resources :photos
+  end
 
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   get 'users/:id' => 'users#show', as: :user

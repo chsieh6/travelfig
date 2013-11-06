@@ -1,0 +1,25 @@
+<div class="panel-body">
+	<%= form_for([@pin, @diary]) do |f| %>
+  <% if @diary.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@diary.errors.count, "error") %> prohibited this diary from being saved:</h2>
+      <ul>
+      <% @diary.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, placeholder: "Happily Married For One year!", class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :body %>
+    <%= f.cktext_area :body, :ckeditor => {:uiColor => "#AADC6E", :toolbar => "Basic"} %>
+  </div>
+	<div class="form-group">
+  	<%= f.submit "Submit", class: "btn btn-primary" %>
+    <% end %>
+	</div>
+</div>

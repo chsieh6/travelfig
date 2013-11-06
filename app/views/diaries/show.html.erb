@@ -1,0 +1,20 @@
+<div class="container show_diary">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+    	<div class="panel panel-default">
+    		<div class="panel-heading">
+    			<h2 class="text-center"><%= @diary.title %></h2>
+    		</div>
+    		<div class="panel-body">
+    			<%= @diary.body.html_safe %>
+    		</div>
+    		<div class="panel-footer">
+    			<% if (current_user) || (current_user.admin) %>
+						<%= link_to 'Edit Diary', edit_pin_diary_path(@pin, @diary) %> |
+					<% end %>
+						<%= link_to 'Your Profile', current_user %>
+    		</div>
+    	</div>
+		</div>
+	</div>
+</div>

@@ -9,7 +9,7 @@
 	    	<div class="panel-body">
 	    		<%= render 'form' %>
 					<%= link_to 'Show', @pin %> |
-					<%= link_to 'Back', pins_path %>
+					<%= link_to 'Your Profile', current_user %>
 				</div>
 				<div class="panel-footer">
 					<h5>Not a Good Pin? <br/><br/> <%= button_to "Delete Pin", pin_path(@pin), :data => { :confirm => "Are you sure? No turning back if you press the button!" }, class: "btn btn-danger", :method => :delete %></h5>

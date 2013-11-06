@@ -11,17 +11,25 @@
       </ul>
     </div>
   <% end %>
+  <div class="form-group">
+    <%= f.label :city %>
+    <%= f.text_field :city, placeholder: "San Francisco, Taipei, London, etc", class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :country %>
+    <%= f.text_field :country, placeholder: "United States, Taiwan, UK, etc", class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :category %>
+    <%= f.select(:category, options_for_select([['My Passport', 'passport'], ['Future Destination', 'future']], "passport"), {}, {class: "form-control"}) %>
+  </div>
 	<div class="form-group">
-		<%= f.label :image, "Upload File" %>
-		<%= f.file_field :image, class: "form-control" %>
+		<%= f.label :cover, "Upload a TravelPin Cover" %>
+		<%= f.file_field :cover, class: "form-control" %>
 	</div>
   <div class="form-group">
-  	<%= f.label :image_remote_url, "Or..Upload From a Website" %>
-  	<%= f.text_field :image_remote_url, class: "form-control" %>
-	</div>
-	<div class="form-group">
-		<%= f.label :descriptions %>
-  	<%= f.text_area :descriptions, class: "form-control" %>
+  	<%= f.label :cover_remote_url, "Upload TravelPin Cover From a Website" %>
+  	<%= f.text_field :cover_remote_url, placeholder: "http://prettypic.com/mountain.jpg", class: "form-control" %>
 	</div>
 	<div class="form-group">
   	<%= f.submit "Submit", class: "btn btn-primary" %>

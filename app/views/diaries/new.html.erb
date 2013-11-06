@@ -1,0 +1,16 @@
+<% provide(:title, 'New Diary') %>
+<div class="container new_diary">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+    	<div class="panel panel-default">
+				<div class="panel-heading">
+					<h1>Create a new Travel Diary<br/><small>Document your travel</small></h1>
+				</div>
+				<%= render 'form' %>
+				<div class="panel-footer">
+				  <%= link_to 'Your Profile', current_user %>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

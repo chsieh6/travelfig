@@ -1,13 +1,11 @@
 source 'https://rubygems.org'
 ruby '2.0.0'
 
-# gems to use bootstrap
 gem 'sass-rails', '4.0.0.rc1'
 gem 'coffee-rails', '4.0.0'
 gem 'uglifier', '2.1.1'
-
+gem "ckeditor"
 gem 'rails', '4.0.0.rc1'
-gem "font-awesome-rails"
 gem 'jquery-rails', '2.2.1'
 gem 'turbolinks', '1.1.1'
 gem 'jbuilder', '1.0.2'
