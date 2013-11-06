@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable, :recoverable, 
+  devise :database_authenticatable, :registerable, :recoverable, :confirmable,
   				:rememberable, :trackable, :validatable, :omniauthable, :omniauth_providers => [:google_oauth2], :omniauth_providers => [:facebook]
 
   has_many :pins, :dependent => :destroy
@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
   has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "https://s3.amazonaws.com/travelfig_heroku/images/home/missing.jpg"
 
   validates :username, presence: true, uniqueness: true
+  validates :first_name, :last_name, presence: true
 
   validates_attachment :avatar, content_type: { content_type: ['image/jpeg', 'image/jpg', 'image/png', 'image/gif']}, 
 															  size: { less_than: 5.megabytes}

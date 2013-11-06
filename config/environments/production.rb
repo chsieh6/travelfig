@@ -86,10 +86,10 @@ Travelfig::Application.configure do
   config.action_mailer.smtp_settings = {
     address: "smtp.gmail.com",
     port: 587,
-    domain: "google.com",
+    domain: "travelfig.com",
     authentication: :plain,
     enable_starttls_auto: true,
-    user_name: "registration@travelfig.com",
+    user_name: "support@travelfig.com",
     password: "travelfig",
   }
 
