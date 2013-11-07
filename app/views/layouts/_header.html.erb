@@ -16,6 +16,7 @@
     <ul class="nav navbar-nav navbar-right">
       <li><%= link_to "+ Travel", new_pin_path %></li>
       <li><%= link_to "Browse Destinations", pins_path, class: "pin_link"%></li>
+      <li><%= link_to "About", about_path %></li>
       <li id="fat-menu" class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.username %><b class="caret"></b>
         </a>
@@ -31,8 +32,7 @@
     <!-- If the user is not signed in, display the following -->
     <% else %>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#intro" id="introbtn">About</a></li>
-      <li><a href="#services" id="servicesbtn">Why TravelFig</a></li>
+      <li><a href="#intro" id="introbtn">Why TravelFig</a></li>
       <li><a href="#portfolio" id="portfoliobtn">Examples</a></li>
       <li><a href="#contact" id="contactbtn">Contact</a></li>
       <li><%= link_to "Sign In", new_user_session_path %></li>

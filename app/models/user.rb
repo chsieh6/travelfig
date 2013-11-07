@@ -12,8 +12,7 @@ class User < ActiveRecord::Base
   validates :username, presence: true, uniqueness: true
   validates :first_name, :last_name, presence: true
 
-  validates_attachment :avatar, content_type: { content_type: ['image/jpeg', 'image/jpg', 'image/png', 'image/gif']}, 
-															  size: { less_than: 5.megabytes}
+  validates_attachment :avatar, content_type: { content_type: ['image/jpeg', 'image/jpg', 'image/png', 'image/gif']}, size: { less_than: 5.megabytes}
 
   def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
     user = User.where(:provider => auth.provider, :uid => auth.uid).first

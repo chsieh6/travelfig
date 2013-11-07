@@ -72,13 +72,8 @@ $(function(){
     return false;
   });
 
-  $("#servicesbtn").click(function(){
-    scroll_to("#services");
-    return false;
-  });
-
-  $("#porfoliobtn").click(function(){
-    scroll_to("#porfolio");
+  $("#portfoliobtn").click(function(){
+    scroll_to("#portfolio");
     return false;
   });
 

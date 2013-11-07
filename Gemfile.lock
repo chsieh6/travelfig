@@ -190,7 +190,7 @@ DEPENDENCIES
   pg
   rails (= 4.0.0.rc1)
   rails-footnotes (= 3.7.9)
-  rails_12factor (= 0.0.2)
+  rails_12factor
   sass-rails (= 4.0.0.rc1)
   sdoc (= 0.3.20)
   sqlite3 (= 1.3.7)
